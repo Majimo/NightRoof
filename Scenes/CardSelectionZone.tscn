@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/CardButton.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/CardButton.tscn" type="PackedScene" id=2]
+
+[node name="CardSelectionZone" type="Panel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -147.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AvailableCards" type="Control" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -340.0
+margin_right = 340.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardButton" type="Button" parent="AvailableCards" instance=ExtResource( 2 )]
+margin_right = 100.0
+margin_bottom = 147.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardButton2" type="Button" parent="AvailableCards" instance=ExtResource( 2 )]
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 147.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardButton3" type="Button" parent="AvailableCards" instance=ExtResource( 2 )]
+margin_left = 220.0
+margin_right = 320.0
+margin_bottom = 147.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardButton4" type="Button" parent="AvailableCards" instance=ExtResource( 2 )]
+margin_left = 330.0
+margin_right = 430.0
+margin_bottom = 147.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CardButton5" type="Button" parent="AvailableCards" instance=ExtResource( 2 )]
+margin_left = 440.0
+margin_right = 540.0
+margin_bottom = 147.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="AvailableCards/CardButton" to="AvailableCards/CardButton" method="_on_CardButton_pressed"]
+[connection signal="pressed" from="AvailableCards/CardButton2" to="AvailableCards/CardButton2" method="_on_CardButton_pressed"]
+[connection signal="pressed" from="AvailableCards/CardButton3" to="AvailableCards/CardButton3" method="_on_CardButton_pressed"]
+[connection signal="pressed" from="AvailableCards/CardButton4" to="AvailableCards/CardButton4" method="_on_CardButton_pressed"]
+[connection signal="pressed" from="AvailableCards/CardButton5" to="AvailableCards/CardButton5" method="_on_CardButton_pressed"]
